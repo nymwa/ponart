@@ -41,4 +41,5 @@ class Sampler(torch.utils.data.Sampler):
             self.batches = self.generate_batches()
         for batch in self.batches:
             yield batch
+        self.batches = None
 
